@@ -1,0 +1,137 @@
+<html>
+
+<head>
+    <title>WebGL Tutorial 11 - Texture Mapping</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <script type="text/javascript" src="gl-matrix.js"></script>
+    <link type="text/css" rel="stylesheet" href="main.css" />
+    <meta charset="UTF-8">
+    <script>
+        window["mat4"] = glMatrix.mat4;
+        window["vec4"] = glMatrix.vec4;
+        window["vec3"] = glMatrix.vec4;
+    </script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="main.css" />
+</head>
+
+<body onload="main()">
+    <h1>How to make Transparent WebGL canvas on HTML</h1>
+    <pre>
+    <div class="first">
+        Founded in 2000, it is a non-profit industry
+        whose main purpose is to enable the accelerated playback
+        and production of dynamic media on various platforms and
+        devices through the production of standard APIs and
+        open source without royalty restrictions.
+    </div>
+</pre>
+    <h2 id="khronos">Kronous</h2>
+
+    <pre><div class="final">
+        CG_FINAL_PROJECT
+        </div>
+    </pre>
+
+    <h2 id="webgl">WEBGL</h2>
+    <pre>
+    <div class="second">
+    A web graphics API established by the Khronos Group 
+    to officially use OpenGL without plug-in assistance in 
+    an Internet browser environment.To be exact, 
+    It is defined based on OpenGL ES.
+    </div>
+    </pre>
+
+    <canvas id="helloapicanvas" style="border: none;" width="1000" height="700"></canvas>
+    <div>
+        <button class="switch" onclick="toggleAnimation()">
+            Toggle Animation
+        </button>
+    </div>
+    <br />
+    <div class="speed">
+        <b> speed</b>
+        <br />
+        <button class="speedup" onclick="speedUp()">
+            &#x2B06;</button>
+        <button class="speeddown" onclick="speedDown()">
+            &#x2B07;</button>
+    </div>
+
+    <div class="opacity">
+        <b> opacity</b>
+        <br />
+        <button class="Bright" onclick="bright()">
+            &#x2B06;</button>
+        <button class="Dark" onclick="dark()">
+            &#x2B07;</button>
+    </div>
+    <div class="explainB">
+        <p>
+            On this website, you can see content which allow you to make HTML canvas
+            transparent so that you can write letters inside the canvas. You can
+            also put pictures on the canvas.<br />
+
+        </p>
+
+        <p class="alert">
+            descriptions in canvas are about webgl and kronous, the company that
+            created webgl!<br />
+            If you have time, please refer to these stories as they are interesting
+            to read!
+        </p>
+        <div class="emphasize">
+            If you don't have time, you don't have to read it (because it's not my
+            project's description!)
+        </div>
+    </div>
+
+    <div class="explainC">
+        <div style="color: aqua; font-size: 20px;">CANVAS</div>
+        <pre>
+        In order to write on canvas, canvas must be transparent first.
+        Otherwise, it'll all be covered and the writing won't be visible. 
+        I made it transparent for the first time, but if it's completely transparent, 
+        you won't know how far it's canvas and how much it's general space, 
+        so I put canvas opacity Button!
+        If you make it completely transparent, it comes out white!
+        To make the canvas transparent,you should use gl.clearColor(0.0, 0.0, 0.0, a); 
+        in here a is alpha value.
+        If you set the alpha value to zero, you'll get a full transparency.
+        And if you want the cube to be transparent, make a less than 1 in 
+        the alpha value of vertexData.
+        Also if you Enable the blend the color of the cube will be blended!
+
+        i.e ; gl.enable(gl.BLEND);
+    </pre>
+    </div>
+    <div class="explainACC">
+        <div style="color: aqua; font-size: 20px;">Velocity</div>
+        <pre>
+        The cube rotates only on the y-axis.
+        Press the Upward key to accelerate the speed. When you start, you add 0.01 more. 
+        Press the Upward key to accelerate in this way: 0.02 , 0.03 Of course,
+        pressing the down direction key will reduce the speed.
+        I divided the case of speed into zero and higher than zero.
+    </pre>
+    </div>
+    <br />
+
+    <div class="explainCSS">
+        <div style="color: aqua; font-size: 20px;">CSS</div>
+        <pre>
+        Even if the canvas is transparent,
+        the letters cannot be placed inside the canvas so that they do not overlap.
+        However, making position absolute and using z-index elements for css can solve this problem.
+    </pre>
+    </div>
+</body>
+<br />
+<br />
+
+<footer>
+    <h3>(MIT License) 201621083 Na Young Yun</h3>
+</footer>
+
+</html>
